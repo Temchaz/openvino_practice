@@ -15,14 +15,14 @@ SQuADModel::SQuADModel() : tokenizer(join(DATA_FOLDER, "bert-large-uncased-vocab
     Core ie;
 
     // Load deep learning network into memory
-    CNNNetwork net = ie.ReadNetwork(join(DATA_FOLDER, "distilbert.xml"),
-                                    join(DATA_FOLDER, "distilbert.bin"));
+    //CNNNetwork net = ie.ReadNetwork(join(DATA_FOLDER, "distilbert.xml"),
+    //                                join(DATA_FOLDER, "distilbert.bin"));
 
     // Initialize runnable object on CPU device
-    ExecutableNetwork execNet = ie.LoadNetwork(net, "CPU");
+    //ExecutableNetwork execNet = ie.LoadNetwork(net, "CPU");
 
     // Create a single processing thread
-    req = execNet.CreateInferRequest();
+    //req = execNet.CreateInferRequest();
 }
 
 std::string SQuADModel::getAnswer(const std::string& question, const std::string& source) {
